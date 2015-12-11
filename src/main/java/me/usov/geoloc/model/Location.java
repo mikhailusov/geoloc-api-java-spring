@@ -1,12 +1,17 @@
 package me.usov.geoloc.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.Date;
 
 /**
  * Created by mikhailusov on 12/8/15.
  */
+@Document(collection = "locations")
 public class Location {
 
+    @Id
     private String id;
     private User user;
     private Date dateTime;
