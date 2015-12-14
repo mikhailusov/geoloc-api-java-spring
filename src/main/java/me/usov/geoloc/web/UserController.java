@@ -1,6 +1,6 @@
-package me.usov.geoloc.controller;
+package me.usov.geoloc.web;
 
-import me.usov.geoloc.model.User;
+import me.usov.geoloc.domain.User;
 import me.usov.geoloc.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

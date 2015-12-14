@@ -1,6 +1,6 @@
 package me.usov.geoloc.repository;
 
-import me.usov.geoloc.model.Location;
+import me.usov.geoloc.domain.Location;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
@@ -11,4 +11,6 @@ import java.util.List;
 public interface LocationRepository extends MongoRepository<Location, String> {
 
     public List<Location> findByLocationName(String locationName);
+
+    public List<Location> findByUid(String uid);
 }

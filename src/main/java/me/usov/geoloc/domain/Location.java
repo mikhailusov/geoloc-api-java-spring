@@ -1,19 +1,22 @@
-package me.usov.geoloc.model;
+package me.usov.geoloc.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by mikhailusov on 12/8/15.
  */
 @Document(collection = "locations")
-public class Location {
+public class Location implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     private String id;
-    private User user;
+    private String uid;
     private Date dateTime;
     private Float latitude;
     private Float longitude;
@@ -27,12 +30,12 @@ public class Location {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public String getUid() {
+        return uid;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public Date getDateTime() {
